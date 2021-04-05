@@ -88,6 +88,8 @@ namespace IT488_Team_Project
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.enemyOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
@@ -179,7 +181,7 @@ namespace IT488_Team_Project
             // enemyTwo
             // 
             this.enemyTwo.BackColor = System.Drawing.Color.Transparent;
-            this.enemyTwo.Image = global::IT488_Team_Project.Properties.Resources._794ad85ec52e710511ac1581a401476a;
+            this.enemyTwo.Image = ((System.Drawing.Image)(resources.GetObject("enemyTwo.Image")));
             this.enemyTwo.Location = new System.Drawing.Point(646, 157);
             this.enemyTwo.Name = "enemyTwo";
             this.enemyTwo.Size = new System.Drawing.Size(45, 59);
@@ -662,7 +664,7 @@ namespace IT488_Team_Project
             // pictureBox24
             // 
             this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
-            this.pictureBox24.Location = new System.Drawing.Point(617, 437);
+            this.pictureBox24.Location = new System.Drawing.Point(633, 437);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(33, 22);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -771,6 +773,18 @@ namespace IT488_Team_Project
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player.TabIndex = 40;
             this.player.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "794ad85ec52e710511ac1581a401476a.gif");
+            this.imageList1.Images.SetKeyName(1, "ezgif.com-gif-maker.gif");
             // 
             // Form1
             // 
@@ -958,6 +972,8 @@ namespace IT488_Team_Project
         private System.Windows.Forms.PictureBox pictureBox57;
         private System.Windows.Forms.PictureBox pictureBox58;
         private System.Windows.Forms.PictureBox pictureBox49;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

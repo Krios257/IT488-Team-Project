@@ -154,6 +154,21 @@ namespace IT488_Team_Project
 
         }
 
+        int intImgNum = 0;
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            enemyOne.Image = imageList1.Images[intImgNum];
+            if (intImgNum == imageList1.Images.Count)
+            {
+                intImgNum = 0;
+            }
+            else
+            {
+                intImgNum++;
+            }
+        }
+
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
